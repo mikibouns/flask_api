@@ -1,0 +1,6 @@
+{% extends "index.html" %}
+{% block title %}Flask - internal server error{% endblock %}
+{% block page_content %}
+    <h3>The local date and time is {{ moment(current_time).format('LLL') }}.</h3>
+    <p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+{% endblock %}
