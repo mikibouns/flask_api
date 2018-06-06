@@ -29,7 +29,7 @@ def form():
 
         session['name'] = form.name.data
         form.name.data = ''
-        return redirect(url_for('home'))
+        return redirect(url_for('main.home'))
     return render_template('form.html', form=form, name=session.get('name'), known=session.get('known', False))
 
 
